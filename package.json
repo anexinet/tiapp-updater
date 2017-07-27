@@ -12,9 +12,7 @@
 		"appcelerator",
 		"titanium",
 		"tiapp.xml",
-		"tiapp",
-		"updater",
-		"cli"
+		"tiapp"
 	],
 	"homepage": "https://github.com/propelics/tiapp-updater",
 	"bugs": "https://github.com/propelics/tiapp-updater/issues",
