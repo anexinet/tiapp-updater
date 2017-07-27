@@ -16,11 +16,17 @@
 		"updater",
 		"cli"
 	],
+	"homepage": "https://github.com/propelics/tiapp-updater",
+	"bugs": "https://github.com/propelics/tiapp-updater/issues",
 	"bin": {
 		"tiapp-updater": "./bin/tiapp-updater"
 	},
 	"author": "Propelics",
 	"license": "ISC",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:propelics/tiapp-updater.git"
+	},
 	"dependencies": {
 		"minimist": "^1.2.0",
 		"tiapp.xml": "^0.2.2",
