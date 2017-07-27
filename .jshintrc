@@ -1,0 +1,8 @@
+{
+	"esversion": 6,
+	"multistr": true,
+	"sub": true, // Supresses warnings when using `obj['prop']` instead of `obj.prop`
+	"expr": true, // supresses errors on `foo && bar()`
+	"-W032": true, // Unnecessary semicolon
+	"-W041": true // use === to compare with
+}

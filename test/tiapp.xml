@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app 
+  xmlns:ti="http://ti.appcelerator.org">
+  <id>com.test.dev</id>
+  <name>My App DEV</name>
+  <version>1.0.0.0</version>
+  <publisher>dummy</publisher>
+  <url/>
+  <description>not specified</description>
+  <copyright>2017 by dummy</copyright>
+  <icon>appicon.png</icon>
+  <persistent-wifi>false</persistent-wifi>
+  <prerendered-icon>false</prerendered-icon>
+  <statusbar-style>default</statusbar-style>
+  <statusbar-hidden>false</statusbar-hidden>
+  <fullscreen>false</fullscreen>
+  <navbar-hidden>false</navbar-hidden>
+  <analytics>true</analytics>
+  <guid>11111111-1111-1111-1111-111111111111</guid>
+  <property name="ti.ui.defaultunit" type="string">dp</property>
+  <property name="run-on-main-thread" type="bool">true</property>
+  <ios>
+    <enable-launch-screen-storyboard>false</enable-launch-screen-storyboard>
+    <use-app-thinning>false</use-app-thinning>
+    <plist>
+      <dict>
+        <key>UISupportedInterfaceOrientations~iphone</key>
+        <array>
+          <string>UIInterfaceOrientationPortrait</string>
+        </array>
+        <key>UISupportedInterfaceOrientations~ipad</key>
+        <array>
+          <string>UIInterfaceOrientationPortrait</string>
+          <string>UIInterfaceOrientationPortraitUpsideDown</string>
+          <string>UIInterfaceOrientationLandscapeLeft</string>
+          <string>UIInterfaceOrientationLandscapeRight</string>
+        </array>
+        <key>UIRequiresPersistentWiFi</key>
+        <false/>
+        <key>UIPrerenderedIcon</key>
+        <false/>
+        <key>UIStatusBarHidden</key>
+        <false/>
+        <key>UIStatusBarStyle</key>
+        <string>UIStatusBarStyleDefault</string>
+      </dict>
+    </plist>
+  </ios>
+  <android 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <manifest android:versionCode="4">
+      <application android:debuggable="true" android:largeHeap="true" android:theme="@style/Theme.NoActionBar">
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name=".MyAppDevActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Titanium">
+          <intent-filter>
+            <action android:name="android.intent.action.MAIN"/>
+            <category android:name="android.intent.category.LAUNCHER"/>
+          </intent-filter>
+          <intent-filter>
+            <data android:scheme="touchtest-dev-x-x"/>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <category android:name="android.intent.category.DEFAULT"/>
+          </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="org.appcelerator.titanium.TiActivity" android:screenOrientation="portrait"/>
+        <service android:enabled="true" android:exported="false" android:name="com.soasta.android.touchtest.TouchTestService"/>
+      </application>
+      <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+      <uses-permission android:name="android.permission.INTERNET"/>
+      <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+      <uses-permission android:name="android.permission.GET_TASKS"/>
+      <uses-permission android:name="android.permission.BLUETOOTH"/>
+      <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    </manifest>
+  </android>
+  <mobileweb>
+    <precache/>
+    <splash>
+      <enabled>true</enabled>
+      <inline-css-images>true</inline-css-images>
+    </splash>
+    <theme>default</theme>
+  </mobileweb>
+  <modules>
+    <module platform="android">com.appcelerator.apm</module>
+    <module platform="iphone">com.appcelerator.apm</module>
+    <module platform="iphone">ti.paint</module>
+    <module platform="android">ti.paint</module>
+    <module platform="android">ti.imagefactory</module>
+    <module platform="iphone">ti.imagefactory</module>
+    <module platform="commonjs">ti.cloud</module>
+  </modules>
+  <deployment-targets>
+    <target device="android">true</target>
+    <target device="blackberry">false</target>
+    <target device="ipad">false</target>
+    <target device="iphone">true</target>
+    <target device="mobileweb">false</target>
+    <target device="tizen">false</target>
+  </deployment-targets>
+  <sdk-version>6.0.4.GA</sdk-version>
+  <plugins>
+    <plugin version="1.0">ti.alloy</plugin>
+  </plugins>
+  <property name="appc-app-id" type="string">111111111111111111111111</property>
+  <property name="acs-oauth-secret-development" type="string">oauth-secret-development-global</property>
+  <property name="acs-oauth-key-development" type="string">oauth-key-development-global</property>
+  <property name="acs-api-key-development" type="string">api-key-development-global</property>
+  <property name="acs-username-development" type="string">username-development-global</property>
+  <property name="acs-password-development" type="string">password-development-global</property>
+  <property name="acs-oauth-secret-production" type="string">oauth-secret-production-global</property>
+  <property name="acs-oauth-key-production" type="string">oauth-key-production-global</property>
+  <property name="acs-api-key-production" type="string">api-key-production-global</property>
+  <property name="acs-username-production" type="string">username-production-global</property>
+  <property name="acs-password-production" type="string">password-production-global</property>
+  <property name="com-appcelerator-apm-id" type="string">gloabl-apm-id-global</property>
+</ti:app>

@@ -1,0 +1,54 @@
+{
+    "global": {
+        "guid": "11111111-1111-1111-1111-111111111111",
+        "properties": {
+            "appc-app-id": "111111111111111111111111",
+            "acs-oauth-secret-development": "oauth-secret-development-global",
+            "acs-oauth-key-development": "oauth-key-development-global",
+            "acs-api-key-development": "api-key-development-global",
+            "acs-username-development": "username-development-global",
+            "acs-password-development": "password-development-global",
+            "acs-oauth-secret-production": "oauth-secret-production-global",
+            "acs-oauth-key-production": "oauth-key-production-global",
+            "acs-api-key-production": "api-key-production-global",
+            "acs-username-production": "username-production-global",
+            "acs-password-production": "password-production-global",
+            "com-appcelerator-apm-id": "gloabl-apm-id-global"
+        }
+    },
+    "dev": {
+        "appId": "com.test.dev",
+        "appName": "My App DEV",
+        "version:format": "major.minor.build|bump.0"
+    },
+    "test": {
+        "appId": "com.test.test",
+        "appName": "My App TEST",
+        "version:format": "major.minor.build.1"
+    },
+    "pre-prod": {
+        "appId": "com.test.preprod",
+        "appName": "My App PRE-PROD",
+        "version:format": "major.minor.build.2"
+    },
+    "prod": {
+        "appId": "com.test.prod",
+        "appName": "My App",
+        "guid": "22222222-2222-2222-2222-222222222222",
+        "version:format": "major.minor",
+        "properties": {
+            "appc-app-id": "app-id-prod",
+            "acs-oauth-secret-development": "oauth-secret-development-prod",
+            "acs-oauth-key-development": "oauth-key-development-prod",
+            "acs-api-key-development": "api-key-development-prod",
+            "acs-username-development": "username-development-prod",
+            "acs-password-development": "password-development-prod",
+            "acs-oauth-secret-production": "oauth-secret-production-prod",
+            "acs-oauth-key-production": "oauth-key-production-prod",
+            "acs-api-key-production": "api-key-production-prod",
+            "acs-username-production": "username-production-prod",
+            "acs-password-production": "password-production-prod",
+            "com-appcelerator-apm-id": "appcelerator-apm-id-prod"
+        }
+    }
+}

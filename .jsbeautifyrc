@@ -1,0 +1,37 @@
+{
+	"js": {
+		"fileTypes": [".js", ".json", ".jsbeautifyrc", ".jscsrc", ".jshintrc"],
+		"brace_style": "collapse",
+		"break_chained_methods": false,
+		"e4x": false,
+		"end_with_newline": true,
+		"eval_code": false,
+		"indent_char": " ",
+		"indent_level": 0,
+		"indent_with_tabs": true,
+		"jslint_happy": true,
+		"keep_array_indentation": false,
+		"keep_function_indentation": false,
+		"max_preserve_newlines": 2,
+		"preserve_newlines": true,
+		"space_after_anon_function": true,
+		"space_before_conditional": true,
+		"space_in_empty_paren": false,
+		"space_in_paren": false,
+		"unescape_strings": false,
+		"wrap_line_length": 140
+	},
+	"html": {
+		"fileTypes": [".xml", ".html", ".hbs"],
+		"braceStyle": "collapse",
+		"indent_char": " ",
+		"indent_level": 0,
+		"indent_with_tabs": true,
+		"indentScripts": "keep",
+		"indentSize": 4,
+		"maxPreserveNewlines": 10,
+		"preserveNewlines": true,
+		"unformatted": ["a", "sub", "sup", "b", "i", "u"],
+		"wrapLineLength": 0
+	}
+}

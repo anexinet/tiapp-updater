@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+
+'use strict';
+const minimist = require('minimist');
+
+const argv = minimist(process.argv.slice(2));
+	
+const tiapp = argv.tiapp || argv.t || 'tiapp.xml';
+const config = argv.config || argv.c || 'tiapp-config.json';
+const env = argv.env || argv.e || 'dev';
+const doLog = argv.doLog || false;
+const save = argv.save || argv.s || false;
+const tiappUpdater = require('../lib/tiapp-updater');
+
+const newTiapp = tiappUpdater.updateTiapp({
+	tiapp: tiapp,
+	config: config,
+	env: env,
+	doLog: doLog,
+	save: save
+});
+
+console.log(newTiapp);
