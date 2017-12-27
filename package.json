@@ -1,6 +1,6 @@
 {
 	"name": "@propelics/tiapp-updater",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Updates the tiapp.xml file based on a list of different settings.",
 	"main": "./lib/tiapp-updater.js",
 	"scripts": {
