@@ -2,6 +2,7 @@
 
 'use strict';
 const minimist = require('minimist');
+const fs = require('fs');
 
 const argv = minimist(process.argv.slice(2));
 	
@@ -10,7 +11,19 @@ const config = argv.config || argv.c || 'tiapp-config.json';
 const env = argv.env || argv.e || 'dev';
 const doLog = argv.doLog || false;
 const save = argv.save || argv.s || false;
+const help = argv.help || argv.h || false;
 const tiappUpdater = require('../lib/tiapp-updater');
+
+if (help) {
+	showHelp();
+	return false;
+}
+
+if (!fs.existsSync(config)) {
+	console.error('Config file not found: ' + config);
+	showHelp();
+	return false;
+}
 
 const newTiapp = tiappUpdater.updateTiapp({
 	tiapp: tiapp,
@@ -19,5 +32,27 @@ const newTiapp = tiappUpdater.updateTiapp({
 	doLog: doLog,
 	save: save
 });
+
+/**
+ * @method showHelp
+ * @private
+ * Shows the help info for the commands available
+ * @return {void}
+ */
+function showHelp() {
+	console.log('');
+	console.log('Updates the tiapp.xml file based in the given configuration json file.');
+	console.log('Usage: tiapp-updater [--tiapp <tiapp.xml>] [--config <tiapp-config.json>] [--env <dev>] [--doLog] [--save] [--help]')
+	console.log('');
+	console.log('Flags:');
+	console.log('');
+	console.log('--tiapp  | -t <tiapp.xml>          Path to the tiapp.xml file.');
+	console.log('--config | -c <tiapp-config.json>  Path to the configuration.json file.');
+	console.log('--env    | -e <dev>                Name of the configuration to use (from the configuration file).');
+	console.log('--doLog                            Shows additional logs.');
+	console.log('--save   | -s                      Applies the changes to the original tiapp.xml file.');
+	console.log('--help   | -h                      Shows this help.');
+	console.log('');
+}
 
 console.log(newTiapp);
