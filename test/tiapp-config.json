@@ -23,7 +23,7 @@
     },
     "test": {
         "appId": "com.test.test",
-        "appName": "My App TEST",
+        "appName": "My_App-TEST",
         "version:format": "major.minor.build.1"
     },
     "pre-prod": {
