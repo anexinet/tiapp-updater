@@ -26,15 +26,15 @@
 		"url": "git@github.com:propelics/tiapp-updater.git"
 	},
 	"dependencies": {
-		"minimist": "^1.2.0",
+		"minimist": "^1.2.5",
 		"tiapp.xml": "^0.2.2",
-		"underscore": "^1.8.3"
+		"underscore": "^1.13.1"
 	},
 	"devDependencies": {
-		"grunt": "^1.0.1",
-		"grunt-contrib-jshint": "^1.1.0",
+		"grunt": "^1.4.0",
+		"grunt-contrib-jshint": "^3.0.0",
 		"grunt-jsbeautifier": "^0.2.13",
 		"jshint-stylish": "^2.2.1",
-		"mocha": "^3.4.2"
+		"mocha": "^8.4.0"
 	}
 }
